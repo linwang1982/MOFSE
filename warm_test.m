@@ -83,35 +83,37 @@ for r = 1 : num_simulation % Number of independent simulations
 
         [W, H, ~, wei, weih] = DecompositionAlgorithm_wei(y_train_cv, Awt, Aht, k, alpha, margin, beta1, beta2, gamma,kn,W0,H0);
         disp([wei,weih]);
-        newd = find(sum(y_train_cv,2)==0);% new drugs
-        alrd = find(sum(y_train_cv,2)~=0);% known drugs
-        news = find(sum(y_train_cv,1)==0);% new side effects
-        alrs = find(sum(y_train_cv,1)~=0);% known side effects
-
-        tempW = zeros(size(Awt{1}));
-        pow = 2;
-        for i1 = 1:length(Awt)
-            tempW = tempW + (wei(i1)^pow)*Awt{i1};
-        end
-        if ~isempty(newd)
-            for i1 = 1:length(newd)
-                  [B,indexA] = sort(tempW(newd(i1),alrd),'descend');
-                  if sum(B(1:knew))~=0
-                     W(newd(i1),:) = B(1:knew)*W(alrd(indexA(1:knew)),:)/sum(B(1:knew)); 
-                  end
+        if knew>0
+            newd = find(sum(y_train_cv,2)==0);% new drugs
+            alrd = find(sum(y_train_cv,2)~=0);% known drugs
+            news = find(sum(y_train_cv,1)==0);% new side effects
+            alrs = find(sum(y_train_cv,1)~=0);% known side effects
+            
+            tempW = zeros(size(Awt{1}));
+            pow = 2;
+            for i1 = 1:length(Awt)
+                tempW = tempW + (wei(i1)^pow)*Awt{i1};
             end
-        end
-
-        tempH = zeros(size(Aht{1}));
-        pow = 2;
-        for i1 = 1:length(Aht)
-            tempH = tempH + (weih(i1)^pow)*Aht{i1};
-        end
-        if ~isempty(news)
-            for i1 = 1:length(news)
-                [B,indexA] = sort(tempH(alrs,news(i1)),'descend');
-                if sum(B(1:knew))~=0
-                   H(:,news(i1)) = H(:,alrs(indexA(1:knew)))*B(1:knew)/sum(B(1:knew)); 
+            if ~isempty(newd)
+                for i1 = 1:length(newd)
+                    [B,indexA] = sort(tempW(newd(i1),alrd),'descend');
+                    if sum(B(1:knew))~=0
+                        W(newd(i1),:) = B(1:knew)*W(alrd(indexA(1:knew)),:)/sum(B(1:knew));
+                    end
+                end
+            end
+            
+            tempH = zeros(size(Aht{1}));
+            pow = 2;
+            for i1 = 1:length(Aht)
+                tempH = tempH + (weih(i1)^pow)*Aht{i1};
+            end
+            if ~isempty(news)
+                for i1 = 1:length(news)
+                    [B,indexA] = sort(tempH(alrs,news(i1)),'descend');
+                    if sum(B(1:knew))~=0
+                        H(:,news(i1)) = H(:,alrs(indexA(1:knew)))*B(1:knew)/sum(B(1:knew));
+                    end
                 end
             end
         end
@@ -165,6 +167,7 @@ for r = 1 : num_simulation % Number of independent simulations
     rmse_num(r) = mean(rmse_fold);
     spear_num(r) = mean(spearman_fold);
     pcc_num(r) = mean(pcc_fold);
-    disp([rmse_num,pcc_num,auc_num,aupr_num]);
+    %disp([rmse_num,pcc_num,auc_num,aupr_num]);
+    disp(['RMSE=',num2str(rmse_num),'; ', 'PCC=',num2str(pcc_num),'; ', 'AUC=',num2str(auc_num),'; ', 'AUPR=',num2str(aupr_num)]);
 end
 end
