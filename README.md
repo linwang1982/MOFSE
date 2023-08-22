@@ -1,10 +1,13 @@
 # NRFSE
-We propose a neighborhood-regularization method (NRFSE) that leverages multi-view data on drugs and side effects to predict the frequency of side effects.<br>
-First, we adopt a class-weighted non-negative matrix factorization to decompose the drug-side effect frequency matrix, in which Gaussian likelihood is used to model unknown drug-side effect pairs.<br>
-Second, we design a multi-view neighborhood regularization to integrate three drug attributes and two side effect attributes, respectively, which makes most similar drugs and most similar side effects have similar latent signatures. The regularization can adaptively determine the weights of different attributes.
+* We propose a neighborhood-regularization method (NRFSE) that leverages multi-view data on drugs and side effects to predict the frequency of side effects.<br>
+* First, we adopt a class-weighted non-negative matrix factorization to decompose the drug-side effect frequency matrix, in which Gaussian likelihood is used to model unknown drug-side effect pairs.<br>
+* Second, we design a multi-view neighborhood regularization to integrate three drug attributes and two side effect attributes, respectively, which makes most similar drugs and most similar side effects have similar latent signatures. The regularization can adaptively determine the weights of different attributes.
 
 # Environment requirements
 Matlab R2019b or later version
+
+# Files
+
 
 # Getting started
 1.Unarchive the data.rar and put the dataset and source code in the same directory.<br>
