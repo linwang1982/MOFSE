@@ -12,6 +12,7 @@ Matlab R2019b or later version
 * warm_test.m
 * DecompositionAlgorithm_wei.m
 * KNN_fun.m
+* auc.m
 
 # Getting started
 1.Unarchive the data.rar and put the dataset and source code in the same directory.<br>
