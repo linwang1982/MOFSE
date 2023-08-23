@@ -12,7 +12,7 @@ Matlab R2019b or later version
 ## Source files
 * main.m -- to load data and set the values of hyperparameters.
 * warm_test.m -- to perform 10-fold cross-validation under warm-start scenario.
-* DecompositionAlgorithm_wei.m -- matrix factorization algorithm, which is to obtain embeddings for drugs and side effects, and weights for multi-views.
+* DecompositionAlgorithm_wei.m -- matrix factorization algorithm, which is to obtain embeddings for drugs and side effects, and optimal weights for multi-views.
 * KNN_fun.m -- to obtain similarity matrices for *k1*-nearest neighbors.
 * auc.m -- to compute AUC and AUPR values.
 ## Data sets
