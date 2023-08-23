@@ -13,7 +13,7 @@ Matlab R2019b or later version
 * main.m--
 * warm_test.m -- to perform 10-fold cross-validation under warm-start scenario.
 * DecompositionAlgorithm_wei.m
-* KNN_fun.m -- 
+* KNN_fun.m -- to obtain similarity matrices for *k1*-nearest neighbors.
 * auc.m -- to compute AUC and AUPR values.
 ## Data sets
 
