@@ -17,7 +17,7 @@ Matlab R2019b or later version
 * auc.m -- to compute AUC and AUPR values.
 ## Data sets
 * DrugSimMat1.mat -- multi-view data for drugs.
-* similarity_se -- multi-view data for side effects.
+* similarity_se.mat -- multi-view data for side effects.
 * frequency_664.mat -- drug side effect frequency data for 664 drugs and 994 side effects.
 * mask_mat_664.mat -- splitted drug side effect frequency data for 10-fold cross-validation under warm-start scenario. 
 
