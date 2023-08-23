@@ -9,7 +9,7 @@ Matlab R2019b or later version
 # Files
 ## Source files
 * main.m--
-* warm_test.m
+* warm_test.m -- to perform 10-fold cross-validation under warm-start scenario.
 * DecompositionAlgorithm_wei.m
 * KNN_fun.m
 * auc.m -- to compute AUC and AUPR values.
