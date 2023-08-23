@@ -16,7 +16,10 @@ Matlab R2019b or later version
 * KNN_fun.m -- to obtain similarity matrices for *k1*-nearest neighbors.
 * auc.m -- to compute AUC and AUPR values.
 ## Data sets
-
+* DrugSimMat1.mat
+* frequency_664.mat
+* mask_mat_664.mat -- splitting drug side effect frequency data for 10-fold cross-validation under warm-start scenario. 
+* 
 
 # Getting started
 1.Unarchive the data.rar and put the dataset and source code in the same directory.<br>
