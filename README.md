@@ -12,7 +12,7 @@ Matlab R2019b or later version
 * warm_test.m
 * DecompositionAlgorithm_wei.m
 * KNN_fun.m
-* auc.m
+* auc.m -- to compute AUC and AUPR values.
 ## Data sets
 
 
