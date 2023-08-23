@@ -10,7 +10,7 @@ Matlab R2019b or later version
 
 # Files
 ## Source files
-* main.m--
+* main.m -- to load data and set the values of hyperparameters.
 * warm_test.m -- to perform 10-fold cross-validation under warm-start scenario.
 * DecompositionAlgorithm_wei.m
 * KNN_fun.m -- to obtain similarity matrices for *k1*-nearest neighbors.
