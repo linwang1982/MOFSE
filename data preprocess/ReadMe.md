@@ -1,6 +1,9 @@
 *drug_all_info_664.pkl*: 从Drugbank中获取的每个药物的相关信息
+
 *drug_info_664.csv*: 按频率矩阵中顺序的药物的SMILES及ID
+
 *se994_info.xlsx*: 从ADReCS下载的副作用信息，按频率矩阵中的顺序
+
 *drug_all_info_664.pkl*: 从DrugBank上获取的药物信息，包含其靶点信息
 
 `get_SE_features.py`: -> *se_feature.mat*
